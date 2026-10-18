@@ -22,6 +22,7 @@ h1,h2,h3,.anton{font-family:'Anton',sans-serif;font-weight:400;text-transform:up
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+/* ============ NAV ============ */
 nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;transition:background .35s,padding .35s}
 nav.scrolled{background:rgba(20,17,11,.88);backdrop-filter:blur(14px);padding:12px 28px}
 .logo{font-family:'Anton';font-size:30px;letter-spacing:.05em;color:var(--cream)}
@@ -31,6 +32,7 @@ nav.scrolled{background:rgba(20,17,11,.88);backdrop-filter:blur(14px);padding:12
 .btn-accent{background:var(--accent);color:#fff}
 .btn-big{font-size:21px;padding:23px 60px}
 .nav-cta{font-size:15px;padding:13px 30px}
+/* ============ HERO (oscuro, dramático) ============ */
 .hero{min-height:108svh;background:radial-gradient(1200px 700px at 50% -10%,#2b2118 0%,var(--ink) 60%);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 24px 90px;position:relative;overflow:hidden}
 .hero-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(255,77,0,.22),transparent 65%);top:-200px;left:50%;transform:translateX(-50%);pointer-events:none}
 .hero-kicker{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--accent2);border:1px solid rgba(255,179,71,.4);padding:12px 26px;border-radius:100px;margin-bottom:30px}
@@ -51,13 +53,16 @@ nav.scrolled{background:rgba(20,17,11,.88);backdrop-filter:blur(14px);padding:12
 .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#8A8478;font-size:12px;letter-spacing:.3em;text-transform:uppercase;z-index:2}
 .scroll-cue:after{content:"";display:block;width:2px;height:44px;background:linear-gradient(var(--accent),transparent);margin:10px auto 0;animation:cue 1.8s ease-in-out infinite}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* ============ TICKER ============ */
 .ticker{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:20px 0;transform:rotate(-1.5deg) scale(1.03);position:relative;z-index:5;margin-top:-30px}
 .ticker-inner{display:inline-block;font-family:'Anton';font-size:30px;letter-spacing:.05em;animation:tick 20s linear infinite}
 @keyframes tick{to{transform:translateX(-50%)}}
+/* ============ SECCIONES ============ */
 section{padding:120px 0;position:relative}
 .sec-tag{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
 .sec-title{font-size:clamp(46px,8.5vw,100px);max-width:940px;margin-bottom:22px}
 .sec-sub{font-size:19px;color:#4a453a;max-width:620px;line-height:1.6}
+/* ============ SHOWCASE (pin, estilo reel) ============ */
 #showcase{background:var(--ink);color:var(--cream);border-radius:40px;margin:0 12px;overflow:hidden;padding:0}
 .show-pin{height:100svh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .show-bg{position:absolute;font-family:'Anton';font-size:26vw;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none}
@@ -71,17 +76,20 @@ section{padding:120px 0;position:relative}
 .show-dots{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:4}
 .show-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25);transition:all .3s}
 .show-dots i.on{background:var(--accent2);transform:scale(1.5)}
+/* ============ PASOS ============ */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}
 .step{background:var(--card);border-radius:26px;padding:44px 34px;box-shadow:0 14px 44px rgba(0,0,0,.07);position:relative;overflow:hidden;transition:transform .3s}
 .step:hover{transform:translateY(-10px) rotate(-.5deg)}
 .step-num{font-family:'Anton';font-size:96px;line-height:1;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .step h3{font-size:32px;margin:20px 0 12px}
 .step p{color:#5c564a;line-height:1.65;font-size:16px}
+/* ============ GALERÍA parallax ============ */
 #galeria .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
 .gimg{border-radius:26px;overflow:hidden;position:relative}
 .gimg img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);will-change:transform}
 .gimg.tall{grid-row:span 2;min-height:480px}
 .gimg .cap{position:absolute;bottom:0;left:0;right:0;padding:26px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-weight:700;font-size:17px}
+/* ============ PACKS ============ */
 #packs{background:var(--ink);color:var(--cream);border-radius:40px;margin:0 12px}
 .pack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px;align-items:stretch}
 .pack{background:#221D14;border:1px solid rgba(255,255,255,.09);border-radius:30px;padding:48px 36px;display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
@@ -96,23 +104,27 @@ section{padding:120px 0;position:relative}
 .pack li{padding:10px 0;color:#D8D2C4;font-size:15px;border-bottom:1px solid rgba(255,255,255,.07)}
 .pack li:before{content:"✓ ";color:var(--accent2);font-weight:800}
 .pack .btn{width:100%;text-align:center}
+/* ============ FAQ ============ */
 .faq-item{border-bottom:1px solid rgba(0,0,0,.12)}
 .faq-q{width:100%;background:none;border:none;text-align:left;font-size:21px;font-weight:800;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--ink);gap:20px}
 .faq-q .plus{font-size:30px;color:var(--accent);transition:transform .35s cubic-bezier(.34,1.56,.64,1);flex-shrink:0}
 .faq-item.open .plus{transform:rotate(135deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .45s ease;color:#5c564a;line-height:1.7;font-size:17px}
 .faq-a p{padding:0 0 28px;max-width:720px}
+/* ============ FINAL ============ */
 #final{background:linear-gradient(135deg,#FF4D00 0%,#FF8A00 60%,#FFB347 100%);color:#fff;text-align:center;border-radius:40px;margin:0 12px 12px;overflow:hidden;position:relative}
 #final .blob{position:absolute;border-radius:50%;background:rgba(255,255,255,.14);pointer-events:none}
 #final h2{font-size:clamp(54px,11vw,130px);margin-bottom:20px;position:relative}
 #final p{font-size:21px;max-width:540px;margin:0 auto 40px;opacity:.94;position:relative}
 #final .btn{background:#fff;color:var(--ink);position:relative}
+/* ============ FOOTER / STICKY ============ */
 footer{padding:64px 24px 130px;text-align:center;color:var(--muted);font-size:14px;line-height:2}
 footer .logo{color:var(--ink);margin-bottom:14px;display:block}
 #sticky{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(20,17,11,.96);backdrop-filter:blur(12px);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;transform:translateY(110%);transition:transform .45s cubic-bezier(.22,1,.36,1)}
 #sticky.show{transform:none}
 #sticky .sp{font-family:'Anton';font-size:28px}
 #sticky .sp small{font-size:15px;color:#8A8478;text-decoration:line-through;font-family:-apple-system,sans-serif;margin-left:8px}
+/* ============ REVEAL ============ */
 .rv{opacity:0;transform:translateY(60px)}
 .wipe{position:relative}
 @media(max-width:880px){
@@ -134,6 +146,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
   <div class="logo">PRINTI<span>.</span></div>
   <a href="#packs" class="btn btn-accent nav-cta" data-buy>La quiero</a>
 </nav>
+
 <header class="hero">
   <div class="hero-glow"></div>
   <div class="hero-kicker rv">🔥 El viral de TikTok · Ya en España</div>
@@ -152,7 +165,9 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
   <p class="hero-note rv"><span class="stars">★★★★★</span><br>Envío rápido a toda España · 30 días para devolverla</p>
   <div class="scroll-cue">Desliza</div>
 </header>
+
 <div class="ticker"><div class="ticker-inner" id="ticker">SIN TINTA ✦ DESDE EL MÓVIL ✦ TAMAÑO BOLSILLO ✦ EN 10 SEGUNDOS ✦ SIN TINTA ✦ DESDE EL MÓVIL ✦ TAMAÑO BOLSILLO ✦ EN 10 SEGUNDOS ✦&nbsp;</div></div>
+
 <section id="showcase">
   <div class="show-pin" id="showPin">
     <div class="show-bg" id="showBg">PRINTI • PRINTI • PRINTI</div>
@@ -177,6 +192,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     <div class="show-dots" id="showDots"><i class="on"></i><i></i><i></i></div>
   </div>
 </section>
+
 <section id="como">
   <div class="wrap">
     <span class="sec-tag rv">Así de fácil</span>
@@ -188,6 +204,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     </div>
   </div>
 </section>
+
 <section id="galeria">
   <div class="wrap">
     <span class="sec-tag rv">La vida con Printi</span>
@@ -199,6 +216,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     </div>
   </div>
 </section>
+
 <section id="packs">
   <div class="wrap">
     <span class="sec-tag rv">Elige tu pack</span>
@@ -227,6 +245,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     </div>
   </div>
 </section>
+
 <section id="faq">
   <div class="wrap" style="max-width:840px">
     <span class="sec-tag rv">Dudas</span>
@@ -243,6 +262,7 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     </div>
   </div>
 </section>
+
 <section id="final">
   <div class="blob" style="width:340px;height:340px;top:-120px;left:-100px"></div>
   <div class="blob" style="width:220px;height:220px;bottom:-80px;right:6%"></div>
@@ -252,14 +272,17 @@ footer .logo{color:var(--ink);margin-bottom:14px;display:block}
     <a href="#packs" class="btn btn-big rv" data-buy>Quiero mi Printi · 19,95&nbsp;€</a>
   </div>
 </section>
+
 <footer>
   <span class="logo">PRINTI<span style="color:var(--accent)">.</span></span>
   <p>Printi · Imprime lo que te hace feliz. 💌<br>Contacto: hola@printi.shop</p>
 </footer>
+
 <div id="sticky">
   <div><div class="sp">19,95&nbsp;€<small>27,95&nbsp;€</small></div><div style="font-size:13px;color:#B9B2A4">Envío a toda España</div></div>
   <a class="btn btn-accent" data-buy>La quiero</a>
 </div>
+
 <script src="gsap.min.js"></script>
 <script src="ScrollTrigger.min.js"></script>
 <script src="lenis.min.js"></script>
@@ -270,25 +293,36 @@ const lenis = new Lenis({ lerp: 0.09 });
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add(t => lenis.raf(t * 1000));
 gsap.ticker.lagSmoothing(0);
+
+/* NAV */
 const nav = document.getElementById('nav');
 ScrollTrigger.create({ start: 60, end: 'max',
   onUpdate: s => nav.classList.toggle('scrolled', s.scroll() > 60) });
+
+/* HERO intro */
 gsap.to('.hero .rv', { opacity: 1, y: 0, duration: 1.1, stagger: 0.1, ease: 'power3.out', delay: 0.15 });
 if (!reduced) {
   gsap.to('#heroImg', { y: -22, rotation: -1.5, duration: 3, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1 });
   gsap.to('#heroPhoto', { y: 16, rotation: 11, duration: 3.4, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.2 });
   gsap.to('.hero-glow', { scale: 1.25, opacity: .7, duration: 5, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+  /* parallax hero al hacer scroll */
   gsap.to('.hero-stage', { y: 120, scale: .92, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   gsap.to('.hero-title', { y: -80, opacity: 0.15, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: '70% top', scrub: true } });
 }
+
+/* Ticker loop */
 const tick = document.getElementById('ticker');
 tick.innerHTML += tick.innerHTML;
+
+/* Reveals genéricos */
 gsap.utils.toArray('section .rv, #final .rv').forEach(el => {
   gsap.to(el, { opacity: 1, y: 0, duration: 1, ease: 'power3.out',
     scrollTrigger: { trigger: el, start: 'top 88%' } });
 });
+
+/* SHOWCASE con pin: el producto se queda, los textos cambian */
 const texts = gsap.utils.toArray('.show-text');
 const dots = gsap.utils.toArray('#showDots i');
 texts.forEach((t, i) => gsap.set(t, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 60 }));
@@ -312,10 +346,14 @@ if (!reduced) {
   showTl.to('#showImg', { scale: 1.18, rotation: 4, ease: 'none', duration: 3 }, 0);
   showTl.to('#showBg', { xPercent: -18, ease: 'none', duration: 3 }, 0);
 }
+
+/* Parallax galería */
 gsap.utils.toArray('#galeria img[data-speed]').forEach(img => {
   gsap.to(img, { yPercent: parseFloat(img.dataset.speed) * 100, ease: 'none',
     scrollTrigger: { trigger: img.closest('.gimg'), start: 'top bottom', end: 'bottom top', scrub: true } });
 });
+
+/* FAQ */
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
     const wasOpen = item.classList.contains('open');
@@ -329,15 +367,21 @@ document.querySelectorAll('.faq-item').forEach(item => {
     }
   });
 });
+
+/* Sticky bar */
 ScrollTrigger.create({ trigger: '#packs', start: 'top 75%', end: 'max',
   onToggle: s => document.getElementById('sticky').classList.toggle('show', s.isActive) });
+
+/* Anclas suaves */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { e.preventDefault(); lenis.scrollTo(t, { offset: -64 }); }
   });
 });
-const STRIPE_LINKS = { solo: '#', pack3: '#', duo: '#' };
+
+/* Pagos Stripe (enlaces al publicar) */
+const STRIPE_LINKS = { solo: 'https://buy.stripe.com/14A9AM3B34o3cgG44A4sE00', pack3: 'https://buy.stripe.com/3cI8wI9Zrg6L94uasY4sE01', duo: 'https://buy.stripe.com/bJe4gs4F79InfsSdFa4sE02' };
 document.querySelectorAll('[data-buy]').forEach(b => {
   b.addEventListener('click', e => {
     const url = STRIPE_LINKS[b.dataset.pack || 'solo'];
